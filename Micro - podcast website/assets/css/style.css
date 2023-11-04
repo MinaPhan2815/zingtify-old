@@ -1,0 +1,318 @@
+/* Các thuộc tính chung */
+:root {
+    /* color */
+    --flourescent-blue: #00f9ef;
+    --heliotrope-gray: #aba6bd;
+    --navbar-violet:#1e0d5b;
+    --dark-violet: #0c003d;
+    --space-cadet: #221d48;
+    --blue-ryb: #0052ff;
+    --white: #ffffff;
+
+    --gradient: linear-gradient(to right, var(--flourescent-blue), var(--blue-ryb));
+
+    /* fonts */
+    --ff-josefin: 'Josefin sans', sans-serif;
+    --fs-1: 25px;
+    --fs-2: 18px;
+    --fs-3: 17px;
+    --fs-4: 15px;
+    --fw-500: 500;
+    --fw-700: 700;
+
+    /* hieu ung */
+    --transition: 0.25s ease-in-out;
+    --section-padding: 30px;
+}
+
+/* Reset css */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+a,
+img,
+span,
+input,
+button,
+ion-icon {
+    display: block;
+}
+
+button {
+    font: inherit;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+input {
+    font: inherit;
+    border: none;
+    width: 100%;
+}
+
+:focus {
+    outline-offset: 4px;
+}
+
+html {
+    font-family: var(--ff-josefin);
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--dark-violet);
+    color: var(--white);
+    height: 200vh;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--dark-violet);
+    border-left: 1px solid var(--space-cadet);
+}
+
+::-webkit-scrollbar-thumb {
+    background: hsla(0, 0%, 100%, 0.8);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: hsla(0, 0%, 100%, 0.6);
+}
+
+.btn{
+    color: white;
+    font-style: var(--fs-4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    padding: 9px 10px;
+    border-radius: 4px;
+}
+/* end reset */
+
+/* css style từ mobile trước rồi sang pc */
+
+/* header */
+header {
+    position: fixed;
+    top: -90px;
+    left: 0;
+    width: 100%;
+    padding-block: 15px;
+    background-color: var(--navbar-violet);
+    box-shadow: 0 1px 3px hsla(0, 0%, 0%, 0.5);
+    transition: var(--transition);
+    z-index: 4;
+}
+
+header.active {
+    top:0;
+}
+
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container{
+    padding: 0 15px;
+}
+
+.nav-toggle-btn{
+    color:var(--white);
+    font-size: 35px;
+    border-radius: 4px;
+}
+
+.nav-toggle-btn ion-icon{
+    --ionicon-stroke-width:40px;
+}
+.navbar{
+    position: fixed;
+    width: 100%;
+    bottom: -270px;
+    left: 0;
+    background-color: var(--navbar-violet);
+    border-radius: 8px 8px 0 0;
+    padding: 30px 10px 10px;
+    box-shadow: 0 -1px 10px hsla(0, 0%, 0%, 0.5);
+    visibility: hidden;
+    transition: 0.15 ease-in;
+    z-index: 2;
+}
+
+.navbar.active{
+    bottom: 0;
+    visibility: visible;
+    transition: 0.25s ease-out;
+}
+
+.nav-list{
+    padding-bottom: 5px;
+    border-bottom: 1px solid hsla(0, 0%, 100%, 0.2);
+    margin-bottom: 5px;
+}
+
+/* tạo đường cạnh trên navbar ở mobile */
+.navbar::before{
+    content: "";
+    position: absolute;
+    top: 13px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 4px;
+    background: hsla(0, 0%, 100%, 0.1);
+    border-radius: 6px;
+}
+
+.nav-item{
+
+}
+.nav-link{
+    color: var(--white);
+    font-size: var(--fs-4);
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+    background: hsla(0, 0%, 100%, 0.1);
+}
+.navbar-actions{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.navbar-actions ion-icon{
+    padding: 5px;   
+}
+
+.navbar-btn{
+    color: white;
+    font-size: 25px;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+.navbar-btn:hover,
+.navbar-btn:focus,
+.navbar-actions .btn:hover,
+.navbar-actions .btn:focus {
+    background: hsla(0, 0%, 100%, 0.1);
+}
+
+.overlay{
+    position: fixed;
+    pointer-events: none;
+    inset: 0;
+    transition: var(--transition);
+    z-index: 1;
+}
+
+.overlay.active{
+    pointer-events: all;
+    background: hsla(0, 0%, 0%, 0.7);
+}
+
+/* hero */
+.hero{
+    padding: 140px 0 var(--section-padding);
+}
+.hero-content{
+
+}
+.hero-title{
+    width: 100%;
+    margin-bottom: 20px;
+}
+.hero-text{
+    color:  var(--white);
+    font-size: var(--fs-4);
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+.hero-btn-group{
+
+}
+.btn-primary{
+    background: var(--gradient);
+    background-size: 500%;
+    background-position: right;
+    padding: 15px 25px;
+    gap: 8px;
+    transition: background var(--transition);
+}
+
+.btn-primary:hover,
+.btn-primary:focus{
+    background-position: left;
+}
+
+.btn-primary>ion-icon{
+    font-style: 18px;
+}
+
+.btn-primary>span{
+    margin-top: 3px;
+}
+
+.hero .btn-primary { margin-bottom: 25px; }
+
+.btn-title {
+  background: var(--gradient);
+  width: max-content;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-size: var(--fs-4);
+  font-weight: var(--fw-700);
+  margin-bottom: 25px;
+}
+
+.hero .btn-link {
+    color: var(--white);
+    font-size: var(--fs-4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: max-content;
+    background: var(--gradient);
+    padding-bottom: 5px;
+    background-size: 0 2px;
+    background-repeat: no-repeat;
+    background-position: 0 97%;
+    border-radius: 4px;
+    transition: background var(--transition);
+}
+
+.hero .btn-link:hover, 
+.hero .btn-link:focus { 
+    background-size: 100% 2px; 
+}
+
+.hero .btn-link { margin-bottom: 15px; }
+  
+.hero-banner { display: none; }
+  
