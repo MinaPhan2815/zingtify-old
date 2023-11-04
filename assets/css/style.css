@@ -3,7 +3,7 @@
     /* color */
     --flourescent-blue: #00f9ef;
     --heliotrope-gray: #aba6bd;
-    --navbar-violet:#1e0d5b;
+    --navbar-violet: #1e0d5b;
     --dark-violet: #0c003d;
     --space-cadet: #221d48;
     --blue-ryb: #0052ff;
@@ -76,7 +76,6 @@ html {
 body {
     background: var(--dark-violet);
     color: var(--white);
-    height: 200vh;
 }
 
 ::-webkit-scrollbar {
@@ -96,7 +95,7 @@ body {
     background: hsla(0, 0%, 100%, 0.6);
 }
 
-.btn{
+.btn {
     color: white;
     font-style: var(--fs-4);
     display: flex;
@@ -105,6 +104,12 @@ body {
     gap: 5px;
     padding: 9px 10px;
     border-radius: 4px;
+}
+
+.h3{
+    color: var(--white);
+    font-size: var(--fs-2);
+    line-height: 1.5;
 }
 /* end reset */
 
@@ -124,29 +129,30 @@ header {
 }
 
 header.active {
-    top:0;
+    top: 0;
 }
 
-header .container{
+header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.container{
+.container {
     padding: 0 15px;
 }
 
-.nav-toggle-btn{
-    color:var(--white);
+.nav-toggle-btn {
+    color: var(--white);
     font-size: 35px;
     border-radius: 4px;
 }
 
-.nav-toggle-btn ion-icon{
-    --ionicon-stroke-width:40px;
+.nav-toggle-btn ion-icon {
+    --ionicon-stroke-width: 40px;
 }
-.navbar{
+
+.navbar {
     position: fixed;
     width: 100%;
     bottom: -270px;
@@ -160,20 +166,20 @@ header .container{
     z-index: 2;
 }
 
-.navbar.active{
+.navbar.active {
     bottom: 0;
     visibility: visible;
     transition: 0.25s ease-out;
 }
 
-.nav-list{
+.nav-list {
     padding-bottom: 5px;
     border-bottom: 1px solid hsla(0, 0%, 100%, 0.2);
     margin-bottom: 5px;
 }
 
 /* tạo đường cạnh trên navbar ở mobile */
-.navbar::before{
+.navbar::before {
     content: "";
     position: absolute;
     top: 13px;
@@ -185,10 +191,9 @@ header .container{
     border-radius: 6px;
 }
 
-.nav-item{
+.nav-item {}
 
-}
-.nav-link{
+.nav-link {
     color: var(--white);
     font-size: var(--fs-4);
     padding: 10px;
@@ -199,16 +204,18 @@ header .container{
 .nav-link:focus {
     background: hsla(0, 0%, 100%, 0.1);
 }
-.navbar-actions{
+
+.navbar-actions {
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
-.navbar-actions ion-icon{
-    padding: 5px;   
+
+.navbar-actions ion-icon {
+    padding: 5px;
 }
 
-.navbar-btn{
+.navbar-btn {
     color: white;
     font-size: 25px;
     padding: 5px;
@@ -222,7 +229,7 @@ header .container{
     background: hsla(0, 0%, 100%, 0.1);
 }
 
-.overlay{
+.overlay {
     position: fixed;
     pointer-events: none;
     inset: 0;
@@ -230,32 +237,33 @@ header .container{
     z-index: 1;
 }
 
-.overlay.active{
+.overlay.active {
     pointer-events: all;
     background: hsla(0, 0%, 0%, 0.7);
 }
 
 /* hero */
-.hero{
+.hero {
     padding: 140px 0 var(--section-padding);
 }
-.hero-content{
 
-}
-.hero-title{
+.hero-content {}
+
+.hero-title {
     width: 100%;
     margin-bottom: 20px;
 }
-.hero-text{
-    color:  var(--white);
+
+.hero-text {
+    color: var(--white);
     font-size: var(--fs-4);
     line-height: 1.8;
     margin-bottom: 20px;
 }
-.hero-btn-group{
 
-}
-.btn-primary{
+.hero-btn-group {}
+
+.btn-primary {
     background: var(--gradient);
     background-size: 500%;
     background-position: right;
@@ -265,29 +273,31 @@ header .container{
 }
 
 .btn-primary:hover,
-.btn-primary:focus{
+.btn-primary:focus {
     background-position: left;
 }
 
-.btn-primary>ion-icon{
+.btn-primary>ion-icon {
     font-style: 18px;
 }
 
-.btn-primary>span{
+.btn-primary>span {
     margin-top: 3px;
 }
 
-.hero .btn-primary { margin-bottom: 25px; }
+.hero .btn-primary {
+    margin-bottom: 25px;
+}
 
 .btn-title {
-  background: var(--gradient);
-  width: max-content;
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-  background-clip: text;
-  font-size: var(--fs-4);
-  font-weight: var(--fw-700);
-  margin-bottom: 25px;
+    background: var(--gradient);
+    width: max-content;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-size: var(--fs-4);
+    font-weight: var(--fw-700);
+    margin-bottom: 25px;
 }
 
 .hero .btn-link {
@@ -307,12 +317,116 @@ header .container{
     transition: background var(--transition);
 }
 
-.hero .btn-link:hover, 
-.hero .btn-link:focus { 
-    background-size: 100% 2px; 
+.hero .btn-link:hover,
+.hero .btn-link:focus {
+    background-size: 100% 2px;
 }
 
-.hero .btn-link { margin-bottom: 15px; }
-  
-.hero-banner { display: none; }
-  
+.hero .btn-link {
+    margin-bottom: 15px;
+}
+
+.hero-banner {
+    display: none;
+}
+
+
+/* podcast css */
+
+.podcast {
+    padding: var(--section-padding) 0;
+}
+
+.podcast-list {
+    display: grid;
+    gap: 30px;
+}
+
+.podcast-card {
+    border-radius: 4px;
+}
+
+.card-banner {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    z-index: 1;
+}
+
+.card-banner::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+}
+
+.podcast-card:hover,
+.podcast-card:focus .card-banner::before {
+    background: hsla(0, 0%, 100%, 0.1);
+}
+
+.card-banner img {
+    width: 100%;
+}
+
+.card-banner-icon {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    display: grid;
+    place-items: center;
+    color: var(--white);
+    border: 2px solid var(--white);
+    border-radius: 50%;
+    font-size: 20px;
+    transition: var(--transition);
+}
+
+.podcast-card:hover .card-banner-icon,
+.podcast-card:focus .card-banner-icon {
+    background: var(--white);
+    color: var(--blue-ryb);
+}
+
+.card-content {}
+
+.card-meta {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    color: var(--heliotrope-gray);
+    font-size: var(--fs-4);
+    margin-left: 35px;
+    margin-bottom: 15px;
+}
+
+.card-meta::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -35px;
+    transform: translateY(-2px);
+    width: 25px;
+    height: 2px;
+    background: var(--heliotrope-gray);
+}
+
+/*gach chan title  */
+.podcast-card .card-title {
+    display: inline;
+    padding: 3px 0;
+    background: var(--gradient);
+    background-position: 0 95%;
+    background-repeat: no-repeat;
+    background-size: 0 2px;
+    transition: var(--transition);
+}
+
+.podcast-card:hover .card-title,
+.podcast-card:focus .card-title {
+    background-size: 100% 2px;
+}
