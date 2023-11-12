@@ -1,14 +1,7 @@
-
-/**
- * element toggle function
- */
-
 const elemToggleFunc = function (elem) { elem.classList.toggle("active"); }
 
-
-
 /**
- * navbar variables
+ * navbar
  */
 
 const navbar = document.querySelector("[data-navbar]");
@@ -25,7 +18,9 @@ for (let i = 0; i < navElemArr.length; i++) {
   });
 
 }
-
+/**
+ * lấy năm ở footer
+ */
 
 const date = document.querySelector('#date')
 const currentYear = new Date().getFullYear()

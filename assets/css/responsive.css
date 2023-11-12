@@ -1,0 +1,257 @@
+
+/**
+ * responsive cho máy tính bảng
+ */
+
+@media (min-width: 768px) {
+
+    :root {
+        --fs-1: 30px;
+        --fs-2: 20px;
+        --fs-4: 18px;
+
+    }
+
+    .container {
+        max-width: 680px;
+        margin: 0 auto;
+    }
+
+    .hero-title {
+        width: 90%;
+    }
+
+    .hero :is(.btn-primary, .btn-title, .btn-link) {
+        --fs-4: 16px;
+        margin-bottom: 0;
+    }
+
+    .hero-btn-group {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 25px;
+    }
+
+    .btn-link-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+    }
+
+    .podcast-list {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .newsletter-card {
+        padding: 50px;
+    }
+
+    .card-form {
+        position: relative;
+    }
+
+    .newsletter-card .btn-primary {
+        position: absolute;
+        top: 4px;
+        right: 4px;
+        bottom: 4px;
+        width: 140px;
+    }
+
+    .newsletter-card .input-field {
+        padding-right: 155px;
+    }
+
+    .footer-top .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 50px;
+    }
+
+    .footer-brand {
+        max-width: 350px;
+        margin-bottom: 0;
+    }
+
+    .footer-list {
+        margin-bottom: 0;
+    }
+
+}
+
+/**
+ * responsive cho pc,laptop mh nhỏ
+ */
+
+@media (min-width: 1024px) {
+
+    :root {
+        --section-padding: 60px;
+    }
+
+    .container {
+        max-width: 1200px;
+    }
+
+    header {
+        padding-block: 15px;
+    }
+
+    header .container {
+        max-width: 1300px;
+    }
+
+    .nav-toggle-btn {
+        display: none;
+    }
+
+    .navbar {
+        position: static;
+        visibility: visible;
+        box-shadow: none;
+        padding: 0;
+        background: none;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .nav-list {
+        display: flex;
+        justify-content: space-between;
+        gap: 15px;
+        border: none;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    .nav-link {
+        position: relative;
+    }
+
+    .nav-link::after {
+        --scale: 0;
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%) scale(var(--scale));
+        transform-origin: left;
+        width: calc(100% - 20px);
+        height: 2px;
+        background: var(--gradient);
+        transition: var(--transition);
+    }
+
+    .nav-link:is(:hover, :focus) {
+        background: var(--gradient);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
+    }
+
+    .nav-link:is(:hover, :focus)::after {
+        --scale: 1;
+    }
+
+    .navbar-actions {
+        gap: 10px;
+    }
+
+    .navbar::before,
+    .overlay {
+        display: none;
+    }
+
+    .navbar-actions .btn {
+        margin-left: 20px;
+    }
+
+    .hero {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        gap: 30px;
+        padding-top: 160px;
+    }
+
+    .hero-content {
+        width: 95%;
+        margin-inline: 0;
+    }
+
+    .hero-title {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .hero-text {
+        margin-bottom: 25px;
+    }
+
+    .hero-btn-group {
+        flex-wrap: wrap-reverse;
+        gap: 35px;
+    }
+
+    .hero :is(.btn-primary, .btn-title, .btn-link) {
+        --fs-4: 17px;
+    }
+
+    .hero-banner {
+        display: block;
+        width: 100%;
+        padding-top: 100%;
+        background: url("../images/hero-banner.png") no-repeat;
+        background-size: cover;
+        border-radius: 100px;
+    }
+
+    .hero-content {
+        max-width: 680px;
+        margin-inline: auto;
+    }
+
+    .podcast-list {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .newsletter-card {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 50px;
+    }
+
+    .newsletter-card .card-content,
+    .card-form {
+        width: 50%;
+    }
+
+    .newsletter-card .card-text,
+    .newsletter-card .input-field {
+        margin-bottom: 0;
+    }
+
+    .footer-link-title {
+        --fs-2: 22px;
+        margin-bottom: 30px;
+    }
+
+    .social-title {
+        margin-left: auto;
+        margin-bottom: 35px;
+    }
+
+    .social-link {
+        width: 45px;
+        height: 45px;
+        font-size: 22px;
+    }
+
+}
