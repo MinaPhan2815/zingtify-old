@@ -98,13 +98,13 @@
     }
 
     header {
-        padding-block: 15px;
+        padding-block: 12px;
     }
 
     header .container {
         max-width: 1300px;
     }
-
+    
     .nav-toggle-btn {
         display: none;
     }
