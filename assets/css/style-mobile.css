@@ -78,23 +78,6 @@ body {
     color: var(--white);
 }
 
-::-webkit-scrollbar {
-    width: 10px;
-}
-
-::-webkit-scrollbar-track {
-    background: var(--dark-violet);
-    border-left: 1px solid var(--space-cadet);
-}
-
-::-webkit-scrollbar-thumb {
-    background: hsla(0, 0%, 100%, 0.8);
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: hsla(0, 0%, 100%, 0.6);
-}
-
 .btn {
     color: white;
     font-size: var(--fs-4);
@@ -106,7 +89,7 @@ body {
     border-radius: 4px;
 }
 
-.h3{
+.h3 {
     color: var(--white);
     font-size: var(--fs-2);
     line-height: 1.5;
@@ -138,23 +121,25 @@ header .container {
     padding: 0 15px;
 }
 
-.logo{
+.logo {
     display: flex;
     color: var(--white);
 }
-.logo:active{
+
+.logo:active {
     color: inherit;
 }
 
-.logo-img{
+.logo-img {
     width: 50px;
 }
 
-.zingtify{
+.zingtify {
     display: flex;
     align-items: center;
     padding: 10px;
 }
+
 .nav-toggle-btn {
     color: var(--white);
     font-size: 35px;
@@ -440,27 +425,29 @@ header .container {
 
 /* css phan dang ky */
 
-.newsletter{
+.newsletter {
     padding: var(--section-padding) 0;
 }
-.newsletter-card{
+
+.newsletter-card {
     background: url(../images/newsletter-bg.jpg) center/cover no-repeat;
     padding: 60px 20px;
     border-radius: 12px;
 }
 
-.newsletter-card .card-title{
+.newsletter-card .card-title {
     font-size: var(--fs-1);
     line-height: 1.3;
     margin-bottom: 10px;
 }
-.newsletter-card .card-text{
+
+.newsletter-card .card-text {
     font-size: var(--fs-4);
     line-height: 1.5;
     margin-bottom: 20px;
 }
 
-.input-field{
+.input-field {
     padding: 18px 15px;
     border-radius: 4px;
     background: hsla(0, 0%, 100%, 0.3);
@@ -470,61 +457,69 @@ header .container {
     margin-bottom: 20px;
 }
 
-.input-field:focus{
+.input-field:focus {
     outline: none;
 }
-.input-field::placeholder{
+
+.input-field::placeholder {
     color: inherit;
     transition: var(--transition);
 }
 
 /* khi dien se mat placeholder */
-.input-field:focus::placeholder{
+.input-field:focus::placeholder {
     opacity: 0;
 }
-.newsletter-card .btn-primary{
+
+.newsletter-card .btn-primary {
     font-size: var(--fs-3);
     width: 100%;
     padding-block: 18px;
 }
 
 /* css phan footer */
-.footer-top{
+.footer-top {
     padding: var(--section-padding) 0;
     border-bottom: 1px solid var(--space-cadet);
 }
+
 .footer-brand,
-.footer-brand .logo{
+.footer-brand .logo {
     margin-bottom: 25px;
 }
-.footer-text{
+
+.footer-text {
     color: var(--heliotrope-gray);
     line-height: 1.6;
     font-size: var(--fs-4);
 }
-.footer-list{
+
+.footer-list {
     margin-bottom: 30px;
 }
-.footer-list > li:not(:last-child){
+
+.footer-list>li:not(:last-child) {
     margin-bottom: 20px;
 }
 
-.footer-link-title{
+.footer-link-title {
     font-size: var(--fs-2);
     font-weight: var(--fw-700);
     margin-bottom: 20px;
 }
-.footer-link{
+
+.footer-link {
     color: var(--heliotrope-gray);
     font-size: var(--fs-4);
     width: max-content;
 }
+
 .footer-link:hover,
-.footer-link:focus { 
-    color: var(--blue-ryb); 
+.footer-link:focus {
+    color: var(--blue-ryb);
 }
 
-.social-title{
+.social-title {
     background: var(--gradient);
     width: max-content;
     font-size: var(--fs-2);
@@ -534,13 +529,15 @@ header .container {
     background-clip: text;
     margin-bottom: 20px;
 }
-.social-list{
+
+.social-list {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     gap: 10px;
 }
-.social-link{
+
+.social-link {
     background: var(--space-cadet);
     width: 35px;
     height: 35px;
@@ -550,11 +547,13 @@ header .container {
     font-size: 20px;
     border-radius: 50%;
 }
+
 .social-link:hover,
 .social-link:focus {
     background: var(--blue-ryb);
 }
-.copyright{
+
+.copyright {
     color: var(--heliotrope-gray);
     font-size: var(--fs-4);
     text-align: center;
@@ -562,13 +561,13 @@ header .container {
     padding-block: 20px;
 }
 
-.copyright a{
+.copyright a {
     color: var(--white);
     display: inline-block;
 }
 
 .copyright a:hover,
-.copyright a:focus { 
+.copyright a:focus {
     color: var(--blue-ryb);
 }
 
@@ -599,5 +598,5 @@ header .container {
 
 .go-top:hover,
 .go-top:focus {
-    --blue-ryb: hsl(221, 100%, 40%); 
+    --blue-ryb: hsl(221, 100%, 40%);
 }

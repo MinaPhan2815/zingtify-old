@@ -1,7 +1,8 @@
+
 const elemToggleFunc = function (elem) { elem.classList.toggle("active"); }
 
 /**
- * navbar
+ * menu navbar trên mobile
  */
 
 const navbar = document.querySelector("[data-navbar]");

@@ -1,4 +1,3 @@
-
 /**
  * responsive cho máy tính bảng
  */
@@ -84,7 +83,7 @@
 }
 
 /**
- * responsive cho pc,laptop mh nhỏ
+ * responsive cho pc,laptop
  */
 
 @media (min-width: 1024px) {
@@ -104,7 +103,7 @@
     header .container {
         max-width: 1300px;
     }
-    
+
     .nav-toggle-btn {
         display: none;
     }
@@ -177,7 +176,7 @@
         grid-template-columns: 1fr 1fr;
         align-items: center;
         gap: 30px;
-        padding-top: 160px;
+        padding-top: 110px;
     }
 
     .hero-content {
@@ -207,7 +206,7 @@
         display: block;
         width: 100%;
         padding-top: 100%;
-        background: url("../images/hero-banner.png") no-repeat;
+        background: url("../images/micro.jpg") no-repeat;
         background-size: cover;
         border-radius: 100px;
     }
@@ -220,7 +219,7 @@
     .podcast-list {
         grid-template-columns: repeat(4, 1fr);
     }
-    
+
     .newsletter-card {
         display: flex;
         align-items: center;
